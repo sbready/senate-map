@@ -1,0 +1,25 @@
+svg {
+  width: 80vw;
+  height: 50vh;
+  display: block;
+  margin: auto;
+}
+
+path:hover {
+  fill: #3FBFB4;
+}
+
+path {
+  cursor: pointer;
+  fill: rgba(33, 165, 137, 1);
+  stroke: rgba(255, 255, 255, 1);
+}
+
+.state_name_div {
+    text-align: center;
+    height: 5vh;
+}
+
+.state_name_div2 {
+    text-align: center;
+}
