@@ -265,13 +265,13 @@ class UsaMap extends Component {
 
           {this.state.senators.length > 0 ?
             <div className="senator-grid">
-              <div className="senator-card">
-                <h2><a href={this.state.sen1Link} target="_blank">{this.state.sen1}</a></h2>
+              <div className={`senator-card ${this.state.senators[0].party}`}>
+                <h2><a href={this.state.sen1Link} target="_blank">{this.state.sen1} ({this.state.senators[0].party})</a></h2>
                 <a href={`tel:+${this.state.senators[0].phone}`}>{this.state.senators[0].phone}</a>
               </div>
 
-              <div className="senator-card">
-                <h2><a href={this.state.sen2Link} target="_blank">{this.state.sen2}</a></h2>
+              <div className={`senator-card ${this.state.senators[1].party}`}>
+                <h2><a href={this.state.sen2Link} target="_blank">{this.state.sen2} ({this.state.senators[1].party})</a></h2>
                 <a href={`tel:+${this.state.senators[1].phone}`}>{this.state.senators[1].phone}</a>
               </div>
             </div>
