@@ -25,6 +25,12 @@ path {
   stroke: rgba(255, 255, 255, 1);
 }
 
+.title {
+  font-size: 3em;
+  text-align: center;
+  color: lightslategray;
+}
+
 .state_name_div {
     text-align: center;
     height: 5vh;
