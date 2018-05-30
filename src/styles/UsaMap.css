@@ -1,3 +1,13 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
 svg {
   width: 80vw;
   height: 50vh;
@@ -22,4 +32,18 @@ path {
 
 .state_name_div2 {
     text-align: center;
+}
+
+.senator-grid {
+  display: inline-grid;
+  grid-template-columns: 100fr 100fr;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
+
+.senator-card {
+  border: 1px dotted gray;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
 }

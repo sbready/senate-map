@@ -5,6 +5,7 @@ import '../styles/UsaMap.css';
 class UsaMap extends Component {
   state = {
     stateName: '',
+    senators: [],
     stateNameDisplay: '',
     sen1: '',
     sen2: '',
@@ -50,7 +51,8 @@ class UsaMap extends Component {
         sen2: senator2,
         sen1Link: senator1Link,
         sen2Link: senator2Link,
-        stateNameDisplay: this.state.stateName + ' Senators:'
+        stateNameDisplay: this.state.stateName + ' Senators',
+        senators: senators
       });
     }
 
@@ -261,13 +263,19 @@ class UsaMap extends Component {
         <div className="state_name_div2">
           <h1>{this.state.stateNameDisplay}</h1>
 
-          <br />
+          {this.state.senators.length > 0 ?
+            <div className="senator-grid">
+              <div className="senator-card">
+                <h2><a href={this.state.sen1Link} target="_blank">{this.state.sen1}</a></h2>
+                <a href={`tel:+${this.state.senators[0].phone}`}>{this.state.senators[0].phone}</a>
+              </div>
 
-          <a href={this.state.sen1Link} target="_blank">{this.state.sen1}</a>
-
-          <br />
-
-          <a href={this.state.sen2Link} target="_blank">{this.state.sen2}</a>
+              <div className="senator-card">
+                <h2><a href={this.state.sen2Link} target="_blank">{this.state.sen2}</a></h2>
+                <a href={`tel:+${this.state.senators[1].phone}`}>{this.state.senators[1].phone}</a>
+              </div>
+            </div>
+          : null}
         </div>
       </div>
     );
